@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = "${env.PROJECT_ID}" // GCP Project ID stored in an environment variable
         GCR_REGION = 'us-central1' // GCR Region
         IMAGE_NAME = "gcr.io/${PROJECT_ID}/sample-app" // Name of the Docker image
-        GOOGLE_APPLICATION_CREDENTIALS = "${env.GCP_SA_KEY}" // Path to the Service Account key file stored in an environment variable
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('your-service-account-key') // Jenkins credentials ID
     }
     stages {
         stage('Checkout') {
