@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: gcr.io/${PROJECT_ID}/sample-app:latest
+        image: gcr.io/devops-mf-434605/sample-app:latest
         ports:
         - containerPort: 80
